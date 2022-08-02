@@ -5,7 +5,7 @@
 		"whatsapp",
 		"bot"
 	],
-	"repository": "https://github.com/Neeraj-x0/Millie-MD",
+	"repository": "https://github.com/Thisan01/Millie-MD",
 	"stack": "container",
 	"env": {
 		"THUMBNAIL_IMAGE": {
@@ -31,7 +31,7 @@
 		"TIME_ZONE": {
 			"description": "Your Time zone , Change if you know what you are doing",
 			"required": false,
-			"value": "Asia/Kolkata"
+			"value": "Asia/Colombo"
 		},
 		"SUDO": {
 			"description": "sudo numbers with country code seperate with , for multiple numbers",
