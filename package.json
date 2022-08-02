@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "main": "index.js",
   "license": "MIT",
-  "author": "Neeraj-x0",
+  "author": "Thisan01",
   "scripts": {
     "start": "node .",
     "format": "prettier --write '**/*.{md,js,json}'"
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Neeraj-x0/Millie-MD.git"
+    "url": "git+https://github.com/Thisan01/Millie-MD.git"
   },
   "keywords": [
     "bot-md",
@@ -34,7 +34,7 @@
     "WhatsApp"
   ],
   "bugs": {
-    "url": "https://github.com/Neeraj-x0/Millie-MD/issues"
+    "url": "https://github.com/Thisan01/Millie-MD/issues"
   },
-  "homepage": "https://github.com/Neeraj-x0/Millie-MD#readme"
+  "homepage": "https://github.com/Thisan01/Millie-MD#readme"
 }
