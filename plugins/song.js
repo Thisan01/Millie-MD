@@ -19,10 +19,10 @@ module.exports = {
       await conn.sendMessage(msg.from, {
         image: { url: thumbnail },
         caption: tiny(`● *Title:* ${title}
-● *Duration:* ${duration}
-● *Viewers:* ${view}
-● *Uploaded:* ${publishedTime}
-● *Channel:* ${authorName}
+🎪 *Duration:* ${duration}
+🎪 *Viewers:* ${view}
+🎪 *Uploaded:* ${publishedTime}
+🎪 *Channel:* ${authorName}
 `),
 
         footer: config.bot_name,
