@@ -12,36 +12,35 @@ module.exports = {
         { audio: await songMeta(q), mimetype: "audio/mpeg" },
         { quoted: msg }
       );
-    } else {
+    } else {  
       let data = (await yts(q)).video[0];
       let { authorName, title, url, thumbnail, duration, view, publishedTime } =
         data;
-      await conn.sendMessage(msg.from, {
+      const buttons = [
+        {
+          buttonId: prefix + "yta " + url,
+          buttonText: { displayText: "🎧 ᴀᴜᴅɪᴏ 🎧" },
+        },
+        {
+          buttonId: prefix + "ytv " + url,
+          buttonText: { displayText: "📽 ᴠɪᴅᴇᴏ 📽" },
+        },
+      ];
+
+      const buttonMessage = {
         image: { url: thumbnail },
         caption: tiny(`● *Title:* ${title}
-🎪 *Duration:* ${duration}
-🎪 *Viewers:* ${view}
-🎪 *Uploaded:* ${publishedTime}
-🎪 *Channel:* ${authorName}
-`),
-
+  ● *Duration:* ${duration}
+  ● *Viewers:* ${view}
+  ● *Uploaded:* ${publishedTime}
+  ● *Channel:* ${authorName}
+  `),
         footer: config.bot_name,
-        templateButtons: [
-          { urlButton: { displayText: "ᴘʟᴀʏ ᴏɴ ʏᴏᴜᴛᴜʙᴇ", url: url } },
-          {
-            quickReplyButton: {
-              displayText: "🎧 ᴀᴜᴅɪᴏ 🎧",
-              id: prefix + "yta " + url,
-            },
-          },
-          {
-            quickReplyButton: {
-              displayText: "📽 ᴠɪᴅᴇᴏ 📽",
-              id: prefix + "ytv " + url,
-            },
-          },
-        ],
-      });
+        buttons: buttons,
+        headerType: 4,
+      };
+      await conn.sendMessage(msg.from, buttonMessage)
     }
-  },
-};
+    
+    }
+  }
